@@ -1,0 +1,84 @@
+=======================
+Fecha: 02/03/08 - 20:38 CEST
+Creación nuevo bot para wikinews desde el tools gracias a la traducción de MisterWiki
+
+
+=======================
+Fecha: 25/02/10 - 00:04:48
+Usuario: MisterWiki
+Sugerencia: a number of articles requiring review
+
+=======================
+Fecha: 25/02/10 - 00:12:40
+Usuario: MC8
+Sugerencia: turn off the flood restriction, or increase it considerably
+
+=======================
+Fecha: 25/02/10 - 00:15:37
+Usuario: MC8
+Sugerencia: Remove anything contained in double braces before fetching
+
+=======================
+Fecha: 25/02/10 - 01:17:00
+Usuario: MC8
+Sugerencia: Use [[:commons:Special:Search/broceni]], not the scary google people
+
+=======================
+Fecha: 26/02/10 - 00:39:54
+Usuario: MC8
+Sugerencia: MisterWiki: on demand linking please, so @link [[Blah]] will link it, but simply [[Blah]] won't.
+
+=======================
+Fecha: 26/02/10 - 02:12:46
+Usuario: MC8
+Sugerencia: go die in a ditch kthx
+
+=======================
+Fecha: 26/02/10 - 02:17:41
+Usuario: MC8
+Sugerencia: Wolfram|Alpha integration ftw
+
+=======================
+Fecha: 26/02/10 - 02:18:21
+Usuario: Bawolff
+Sugerencia: Google calculator integration
+
+=======================
+Fecha: 26/02/10 - 02:18:51
+Usuario: MC8
+Sugerencia: If you really have to have jokes, use a language people understand. Imo, it's mindless drivel, but agf :|
+
+=======================
+Fecha: 26/02/10 - 02:19:22
+Usuario: Bawolff
+Sugerencia: integrate http://en.wikinews.org/wiki/User:Zachary/Wikilinker functionality :P
+
+=======================
+Fecha: 15/03/10 - 00:16:47
+Usuario: Tempodivalse
+Sugerencia: test
+
+=======================
+Fecha: 15/03/10 - 00:17:05
+Usuario: Tempodivalse
+Sugerencia: add a weather feature
+
+=======================
+Fecha: 16/03/10 - 03:32:03
+Usuario: MisterWiki
+Sugerencia: weather functionality
+
+=======================
+Fecha: 19/03/10 - 03:50:18
+Usuario: Mikemoral
+Sugerencia: Ignore infoboxes.
+
+=======================
+Fecha: 25/03/10 - 00:42:32
+Usuario: MisterWiki
+Sugerencia: it Mike_H
+
+=======================
+Fecha: 22/04/10 - 03:23:35
+Usuario: PiRSquared17
+Sugerencia: etvc

@@ -1,0 +1,85 @@
+/****
+ * 28.09.2008
+ *
+   la funciÛn se uso para que tradujera del ingÈs al castellano y viceversa, usando la web dict.org
+   la base de datos era muy pobre y gracias a yrithinnd carguÈ el diccionario que usÛ anteriormente  *
+   a mi carpeta de usuario.											   *
+														****/
+def dictorg(query,strategy,database):
+    query=urllib.quote(query)
+    if database == "en-es":
+        database = "eng-spa"
+    elif database == "es-en":
+        database = "spa-eng"
+    params = urllib.urlencode({'Form': 'Dict2', 'Query': query, 'Database': database
+                               })
+    a=net.pageTextPost('http://www.dict.org/bin/Dict?', params )
+    a=a.decode('utf-8')
+    if u"definition found" in a.lower():
+        checkURL=a.split('Freedict dictionary </a>:\n</b><pre>\n\n')[1].split('</pre>')[0].replace("\n",":",1).replace("\n","; ").replace(" "*7," ")
+        if checkURL.endswith("; "):
+            checkURL=checkURL[:-2]+"."
+        check=net.pageText('http://www.dict.org/bin/Dict?Form=Dict2&Query='+query+"&Database="+database) #checkURL)
+        chuleta=check.split("<pre></pre><b>")[1].split(" definition")[0]
+        #print chuleta
+        return int(chuleta),u'http://www.dict.org/'+checkURL
+    else:
+        return 0,'no se ha encontrado ninguna coincidencia'
+
+
+/*****
+ * 07.10.08
+ *
+   estas funciones las creÛ Yrithinnd, supongo que desconocÌa lo bien que van las regexp    
+   shellcheck() ha sido reemplazada por isAlpha()						 *
+   shellcheckbc() por isCalculable()								 *
+ 												    *****/
+def shellcheck(a):
+	a=a.replace("√°","a")
+	a=a.replace("√©","e")
+	a=a.replace("√≠","i")
+	a=a.replace("√≥","o")
+	a=a.replace("√∫","u")
+	a=a.replace("√º","u")
+
+	a=a.replace("√Å","A")
+	a=a.replace("√â","E")
+	a=a.replace("√ç","I")
+	a=a.replace("√ì","O")
+	a=a.replace("√ö","U")
+	a=a.replace("√ú","U")
+
+	a=a.replace("√±","n")
+	a=a.replace("√ë","N")
+	return a.isalpha()
+
+def shellcheckbc(a):
+	a=a.replace("+","1")
+	a=a.replace("-","1")
+	a=a.replace("*","1")
+	a=a.replace("/","1")
+	a=a.replace(")","1")
+	a=a.replace("(","1")
+	a=a.replace(".","1")
+	return a.isdigit()
+
+/*****
+ * 13.10.08
+ *
+   esta funciÛn nunca dejÛ de usarse, pero permaneciÛ en forma de comentario
+   se disenÛ para proporcionar los usuarios conectados mediante el comando @stats	   *
+												   *
+												****/
+
+#			for chname, chobj in self.channels.items():
+#				c.privmsg(canal, "--- Channel statistics ---")
+#				c.privmsg(canal, "Channel: " + chname)
+#				users = chobj.users()
+#				users.sort()
+#				c.privmsg(canal, "Users: " + string.join(users, ", "))
+#				opers = chobj.opers()
+#				opers.sort()
+#				c.privmsg(canal, "Opers: " + string.join(opers, ", "))
+#				voiced = chobj.voiced()
+#				voiced.sort()
+#				c.privmsg(canal, "Voiced: " + string.join(voiced, ", "))
